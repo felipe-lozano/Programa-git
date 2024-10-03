@@ -8,7 +8,7 @@ func factura () {
 	var producto string
 	var precio int
 	var cantidad int
-	var valor int
+	var valorfinal int 
 
 	fmt.Println("Ingrese el nombre del producto: ")
 	fmt.Scanln(&producto)
@@ -22,11 +22,10 @@ func factura () {
 	if respuesta == "si" {
 		factura()
     } 
-	valor = cantidad * precio
-	for i := 0; i < cantidad; i++ {
-		fmt.Printf("Producto: ", producto , "precio", precio , "valor ", valor )
-    }
-	fmt.Println("el valor final es ")
+	valor := cantidad * precio
+	valorfinal += valor
+	fmt.Println(" Producto: ", producto , "precio", precio , "valor ", valor )
+    fmt.Println("el valor final es ", valorfinal )
 	
 }
 
