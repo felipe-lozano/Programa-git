@@ -22,7 +22,7 @@ func factura () {
 	if respuesta == "si" {
 		factura()
     } 
-	valor = cantidad * precio
+	valor = cantidad * &precio
 	for i := 0; i < cantidad; i++ {
 		fmt.Printf("Producto: ", producto , "precio", precio , "valor ", valor )
     }
