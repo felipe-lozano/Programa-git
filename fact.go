@@ -83,3 +83,5 @@ func mostrarFactura(items []Item) {
 	fmt.Printf("%-20s %-10s %-15s %-15.2f\n", "Total Final", "", "", totalFinal)
 	fmt.Println("-----------------------------------------------------")
 }
+
+
