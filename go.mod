@@ -10,4 +10,5 @@ require (
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/ruudk/golang-pdf417 v0.0.0-20201230142125-a7e3863a1245 // indirect
 	golang.org/x/image v0.20.0 // indirect
+	golang.org/x/tools v0.26.0 // indirect
 )

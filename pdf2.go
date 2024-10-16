@@ -7,6 +7,7 @@ import (
 	"os"
 	"strconv"
 	"strings"
+	"time"
 
 	"github.com/jung-kurt/gofpdf"
 )
@@ -19,6 +20,11 @@ type Item struct {
 }
 
 var cliente string
+// Obtener la fecha y hora actual
+
+
+
+
 
 func main() {
 	var items []Item
@@ -66,6 +72,12 @@ func main() {
 }
 
 func generarFacturaPDF(items []Item) {
+
+	// Obtener la fecha y hora actual
+	fechaactual := time.Now().Format("02/01/2006 15:04:05")
+	// Formatear la fecha en formato deseado (día/mes/año)
+
+	
 	// Crear un nuevo PDF
 	pdf := gofpdf.New("P", "mm", "A4", "") // Inicializa el PDF
 	pdf.AddPage()
@@ -80,7 +92,7 @@ func generarFacturaPDF(items []Item) {
 	pdf.Ln(10)
 	pdf.Cell(0, 10, "Numero de Factura: 12345")
 	pdf.Ln(10)
-	pdf.Cell(0, 10, "Fecha: 01/10/2024")
+	pdf.Cell(0, 10, fmt.Sprintf("Fecha : %s ", fechaactual))
 	pdf.Ln(10)
 	pdf.Cell(0, 10, fmt.Sprintf("Cliente: %s ", cliente))
 	pdf.Ln(10)
